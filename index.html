@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>The Thermodynamics of Software Systems</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="David Stanley">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="style.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>The Thermodynamics of Software Systems</h1>
+					<h6>(yes, really)</h6>
+				</section>
+				<section>
+					<h2>David Stanley</h2>
+					<ul>
+						<li>Sr. Application Developer for MMGY Global</li>
+						<li>@davidstanley01</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h2>Disclaimers</h2>
+						<ul>
+							<li class="fragment">This analogy assumes a non-trivial softare system.</li>
+							<li class="fragment">No analogy is perfect.  They all break down at some point.</li>
+							<li class="fragment">This analogy is no different. Some parts are a better fit than others.</li>
+							<li class="fragment">If it doesn't work, have another drink.</li>
+						</ul>
+					</section>
+					<section>
+						<img src="img/equations.jpg" />
+						<p class="small">http://www.uni-marburg.de/fb15/ag-germano/research/equations.png</p>
+					</section>
+					<section>
+						<img src="img/austin.jpg" />
+						<p class="small">http://s214.photobucket.com/user/anarchy_racing_customz/media/3r6blb_zps48ee9ff7.jpg.html</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>The Laws</h2>
+					</section>
+					<section>
+						<h3>0<sup>th</sup> Law</h3>
+						<p>If two systems are both in thermal equilibrium with a third then they are in thermal equilibrium with each other.</p>
+						<p></p>
+						<p class="fragment">TRANSLATION: Everyone in the casino must bet.</p>
+					</section>
+					<section>
+						<h3>1<sup>st</sup> Law</h3>
+						<p>The increase in internal energy of a body is equal to the heat supplied to the body minus work done by the body.</p>
+						<p></p>
+						<p class="fragment">TRANSLATION: In the long run, the house always wins.</p>
+					</section>
+					<section>
+						<h3>2<sup>nd</sup> Law</h3>
+						<p>Over time, differences in temperature, pressure, and chemical potential decrease in an isolated non-gravitational physical system, leading eventually to a state of thermodynamic equilibrium.</p>
+						<p></p>
+						<p class="fragment">TRANSLATION: In the long run, you can only hope to break even.</p>
+					</section>
+					<section>
+						<h3>3<sup>rd</sup> Law</h3>
+						<p>The entropy of a perfect crystal at absolute zero is exactly equal to zero.</p>
+						<p></p>
+						<p class="fragment">TRANSLATION: You can't quit.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>0<sup>th</sup> Law - applied</h2>
+						<p>Everything is connected.
+							<br /><i>or</i><br />
+							Nothing exists in isolation</p>
+					</section>
+					<section>
+						<h2>Everything depends upon something</h2>
+						<ul>
+							<li>Operating System</li>
+							<li>Database</li>
+							<li>DNS</li>
+							<li>External Services</li>
+						</ul>
+					</section>
+					<section>
+						<p>The circle of life</p>
+						<img src="img/circle_of_life.jpg" />
+						<p class="small">http://www.fanpop.com/clubs/the-lion-king/images/15385011/title/lion-king-part-1-circle-life-screencap</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Self-reliance, sort of</h2>
+						<ol>
+							<li>Code defensively</li>
+							<li>Fail gracefuly</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Defensive coding</h2>
+						<p class="fragment">Default clauses on switch statements</p>
+						<p class="fragment">Validate inputs and encode outputs</p>
+						<p class="fragment">Log errors and LOOK AT THE LOG</p>
+						<p class="fragment">Write tests that cover edge cases, too</p>
+					</section>
+					<section>
+						<h2>Fail gracefully</h2>
+						<p>Whoops</p>
+						<img src="img/whoops.png" />
+						<p class="small">https://github.com/filp/whoops</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>1<sup>st</sup> Law - applied</h2>
+						<p>Value = Utility Generated - Maintenance Effort</p>
+					</section>
+					<section>
+						<p>Mass can neither be created nor destroyed. It can only change forms.</p>
+						<p class="fragment"><img src="img/OneDoesNot.jpg" />
+							<br /><span class="small">http://wrightimc.com/wp-content/uploads/2012/08/OneDoesNot.jpg</span></p>
+					</section>
+					<section>
+						<ol>
+							<li>Build for maintenance and change</li>
+							<li>Set the next developer up for success</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Yes, it takes time</h2>
+						<img src="img/time.gif" />
+						<p class="small">http://devopsreactions.tumblr.com/post/40246654962/refactoring-the-code</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Build for Maintenance and Change</h2>
+						<ol>
+							<li class="fragment">Archetectural decisions</li>
+							<li class="fragment">Modularity and Dependency Management</li>
+							<li class="fragment">20 lines per method / 200 lines per class</li>
+							<li class="fragment">Return something, anything</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Set the next developer up for success</h2>
+						<ol>
+							<li class="fragment">Doc Blocks</li>
+							<li class="fragment">Type-hint wherever possible</li>
+							<li class="fragment">No hidden side-effects</li>
+							<li class="fragment">COMMENT CODE</li>
+						</ol>
+					</section>
+					<section>
+						<img src="img/no_comment.png" />
+						<p class="small">From wp-admin/upload.php</p>
+					</section>
+					<section>
+						<img src="img/no_comment2.png" />
+						<p class="small">From wp-admin/upload.php</p>
+					</section>
+					<section>
+						<img src="img/ron.gif" />
+						<p class="small">http://devopsreactions.tumblr.com/post/47445617308/when-french-homeland-intelligence-forced-wikipedia-fr</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>2<sup>nd</sup> Law - applied</h2>
+						<p>Entropy</p>
+					</section>
+					<section>
+						<img src="img/codebase.gif" />
+						<p class="small">http://devopsreactions.tumblr.com/post/54501133692/codebase-over-time</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Fighting Code Entropy</h2>
+						<ol>
+							<li class="fragment">Have a coding standard and use it.</li>
+							<li class="fragment">Code Review</li>
+							<li class="fragment">Write tests!</li>
+							<li class="fragment">Use automated tools to enforce standards</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Coding Standards</h2>
+						<ol>
+							<li>PSR 1 or 2</li>
+							<li>Zend</li>
+							<li>Wordpress</li>
+							<li>Drupal</li>
+							<li>PEAR</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Code Review</h2>
+						<p>Have someone review your work and ask you critical questions.</p>
+						<p>No time for ego...</p>
+					</section>
+					<section>
+						<img src="img/wtf.png" />
+						<p class="small">http://commadot.com/wtf-per-minute/</p>
+					</section>
+					<section>
+						<h2>Write Tests</h2>
+						<ol>
+							<li class="fragment">The unknown bugs</li>
+							<li class="fragment">Build with testability in mind</li>
+							<li class="fragment">Code review on tests, too</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Not like this</h2>
+						<img src="img/tests.gif" />
+						<p class="small">http://devopsreactions.tumblr.com/post/52368854242/writing-unit-tests</p>
+					</section>
+					<section>
+						<h2>Use the tools we have available</h2>
+						<ol>
+							<li>PHPDocumentor</li>
+							<li>PHP Mess Detector</li>
+							<li>PHP Copy/Paste Detector</li>
+							<li>Use your CI tool to automatically run these tests</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>3<sup>rd</sup> Law - applied</h2>
+						<p>Every non-trivial system in the wild that provides value requires some measure of maintenance and feeding.</p>
+					</section>
+					<section>
+						<h2>Manage the exceptions</h2>
+						<ol>
+							<li>Logging Interface</li>
+							<li>Notify on threshold</li>
+							<li>Back that mo-fo up</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					<h2>Questions?</h2>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
